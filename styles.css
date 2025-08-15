@@ -1,0 +1,62 @@
+p, h1, h2, h3, h4, h5, h6, text, a, li, ul {
+    font-family: "Comic Sans MS", cursive;
+    color: black;
+}
+
+.title_text {
+    position: fixed;
+    top: 70px;  /* Increased separation from menubar */
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: black;
+    margin: 0;  /* Remove default margin */
+}
+
+.menuBar {
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    right: 20px;
+    background-color: #2076ff;
+    border-radius: 25px;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.menuBar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.menuBar li {
+    display: inline;
+}
+
+.menuBar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    transition: background-color 0.3s;
+}
+
+.menuBar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Regular h1 elements (not the title) */
+h1, h2:not(.title_text) {
+    text-align: center;
+    margin: 5px 0;  /* 5px top and bottom margin */
+}
+
+/* First h1 after menubar needs extra top margin */
+h1, h2:not(.title_text):first-of-type {
+    margin-top: 60px;  /* Distance from menubar */
+    margin-bottom: 5px;
+}
