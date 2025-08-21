@@ -25,7 +25,7 @@ html, body {
 /* Default = Light Mode */
 body {
   background-color: #ffffff; /* fallback color */
-  background-image: url(".assets/background-light-mode.png");
+  background-image: url("./assets/background-light-mode.png");
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -38,7 +38,7 @@ body {
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #000000; /* fallback color */
-    background-image: url(".assets/background-dark-mode.jpg");
+    background-image: url("./assets/background-dark-mode.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
