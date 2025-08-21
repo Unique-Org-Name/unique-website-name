@@ -1,10 +1,12 @@
-/* General text styles */
+/* ------------------------------ General Text Styles ------------------------------ */
 p, h1, h2, h3, h4, h5, h6, text, a, li, ul {
-    font-family: "Comic Sans MS";
+    font-family: "Comic Sans MS", cursive;
     color: inherit; /* inherit from body so dark mode works */
+    margin: 0;
+    padding: 0;
 }
 
-/* Title text */
+/* Title text (optional fixed title) */
 .title_text {
     position: fixed;
     top: 70px;  /* Separation from menubar */
@@ -17,37 +19,39 @@ p, h1, h2, h3, h4, h5, h6, text, a, li, ul {
 
 /* Ensure background fills viewport */
 html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    transition: background 0.3s ease, color 0.3s ease;
 }
+
+/* ------------------------------ Content Box ------------------------------ */
 .contentBox {
-    background-color: rgba(255, 255, 255, 0.9); /* more opaque */
+    background-color: rgba(255, 255, 255, 0.9); /* light mode: slightly transparent */
     padding: 25px;
     border-radius: 10px;
     max-width: 800px;
     margin: 120px auto 20px auto;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
     color: inherit;
-    position: relative; /* ensure it sits above background */
-    z-index: 1; /* above background */
+    position: relative; /* sit above background */
+    z-index: 1; 
 }
 
-/* Default = Light Mode */
+/* ------------------------------ Body Background ------------------------------ */
+/* Light Mode */
 body {
-  background-color: #ffffff; /* fallback color */
-  background-image: url("./assets/background-light-mode.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
-  color: #000000;
-  transition: background 0.3s ease, color 0.3s ease;
+    background-color: #ffffff; 
+    background-image: url("./assets/background-light-mode.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #000000;
 }
 
 /* Dark Mode */
 @media (prefers-color-scheme: dark) {
-    /* Body background */
     body {
         background-color: #000000;
         background-image: url("./assets/background-dark-mode.jpg");
@@ -63,24 +67,23 @@ body {
         color: white;
     }
 
-    /* Content box */
+    /* Content box dark mode */
     .contentBox {
-        background-color: rgba(0, 0, 0, 0.8); /* darker to really stand out */
-        color: #ffffff; /* text readable */
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7); /* stronger shadow for contrast */
+        background-color: rgba(0, 0, 0, 0.75) !important; /* dark, slightly transparent */
+        color: #ffffff !important;                       /* readable text */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7) !important; /* stronger shadow */
     }
 }
 
-
-/* --- Navigation Bar --- */
+/* ------------------------------ Navigation Bar ------------------------------ */
 .menuBar {
     position: fixed;
     top: 10px;
     left: 20px;
     right: 20px;
     background-color: #2076ff;
-    border-radius: 8px;       /* subtle rounded corners for the menubar */
-    padding: 10px 0;           /* reduced padding to make corners visible */
+    border-radius: 8px;       /* subtle roundness */
+    padding: 10px 0;          /* reduced padding for corner visibility */
     z-index: 1000;
     box-sizing: border-box;
 }
@@ -92,7 +95,7 @@ body {
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 20px;                /* clean spacing between menu items */
+    gap: 20px;
 }
 
 /* Individual menu items */
@@ -104,8 +107,8 @@ body {
 .menuBar a {
     color: white;
     text-decoration: none;
-    padding: 6px 15px;        /* smaller padding so link corners are visible */
-    border-radius: 4px;       /* subtle rounded corners for links */
+    padding: 6px 15px;        /* smaller padding for corner visibility */
+    border-radius: 4px;       /* subtle roundness */
     transition: background-color 0.3s;
 }
 
@@ -113,7 +116,7 @@ body {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* --- Headings --- */
+/* ------------------------------ Headings ------------------------------ */
 h1, h2:not(.title_text) {
     text-align: center;
     margin: 5px 0;
