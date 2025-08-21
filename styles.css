@@ -52,18 +52,19 @@ body {
   }
 }
 
-/* Menu bar */
+/* --- Navigation Bar --- */
 .menuBar {
     position: fixed;
     top: 10px;
     left: 20px;
     right: 20px;
     background-color: #2076ff;
-    border-radius: 8px; /* smaller roundness */
+    border-radius: 8px; /* subtle roundness for the menubar container */
     padding: 10px 0;
     z-index: 1000;
 }
 
+/* Menu items container */
 .menuBar ul {
     list-style: none;
     margin: 0;
@@ -73,15 +74,17 @@ body {
     gap: 30px;
 }
 
+/* Individual menu items */
 .menuBar li {
     display: inline;
 }
 
+/* Links inside the menubar */
 .menuBar a {
     color: white;
     text-decoration: none;
     padding: 10px 20px;
-    border-radius: 4px; /* smaller roundness for links */
+    border-radius: 4px; /* subtle roundness for links */
     transition: background-color 0.3s;
 }
 
@@ -89,7 +92,7 @@ body {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Headings */
+/* --- Headings --- */
 h1, h2:not(.title_text) {
     text-align: center;
     margin: 5px 0;
