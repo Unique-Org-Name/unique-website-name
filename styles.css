@@ -47,16 +47,9 @@ body {
 
 /* Dark Mode */
 @media (prefers-color-scheme: dark) {
-    /* Content box styling for dark mode */
-    .contentBox {
-        background-color: rgba(0, 0, 0, 0.65); /* dark, semi-transparent */
-        color: #ffffff; /* readable text */
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* subtle depth */
-    }
-
-    /* Body background for dark mode */
+    /* Body background */
     body {
-        background-color: #000000; /* fallback color */
+        background-color: #000000;
         background-image: url("./assets/background-dark-mode.jpg");
         background-repeat: no-repeat;
         background-position: center;
@@ -65,11 +58,19 @@ body {
         color: #ffffff;
     }
 
-    /* Menu links in dark mode */
+    /* Menu links */
     .menuBar a {
         color: white;
     }
+
+    /* Content box */
+    .contentBox {
+        background-color: rgba(0, 0, 0, 0.8); /* darker to really stand out */
+        color: #ffffff; /* text readable */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7); /* stronger shadow for contrast */
+    }
 }
+
 
 /* --- Navigation Bar --- */
 .menuBar {
