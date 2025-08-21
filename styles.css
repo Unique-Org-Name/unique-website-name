@@ -59,9 +59,10 @@ body {
     left: 20px;
     right: 20px;
     background-color: #2076ff;
-    border-radius: 8px; /* subtle roundness for the menubar container */
-    padding: 10px 0;
+    border-radius: 8px;       /* subtle rounded corners for the menubar */
+    padding: 5px 0;           /* reduced padding to make corners visible */
     z-index: 1000;
+    box-sizing: border-box;
 }
 
 /* Menu items container */
@@ -71,7 +72,7 @@ body {
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;                /* clean spacing between menu items */
 }
 
 /* Individual menu items */
@@ -83,8 +84,8 @@ body {
 .menuBar a {
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 4px; /* subtle roundness for links */
+    padding: 6px 15px;        /* smaller padding so link corners are visible */
+    border-radius: 4px;       /* subtle rounded corners for links */
     transition: background-color 0.3s;
 }
 
