@@ -22,15 +22,17 @@ html, body {
   padding: 0;
 }
 .contentBox {
-    background-color: rgba(255, 255, 255, 0.6); /* white with 60% opacity */
-    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.85); /* more opaque */
+    padding: 25px;
     border-radius: 10px;
     max-width: 800px;
-    margin: 100px auto 20px auto; /* centers it and adds top spacing below menubar */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
-    color: inherit; /* keeps dark mode text color if enabled */
-    backdrop-filter: blur(5px); /* optional: soft blur behind */
+    margin: 120px auto 20px auto;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    color: inherit;
+    position: relative; /* ensure it sits above background */
+    z-index: 1; /* above background */
 }
+
 /* Default = Light Mode */
 body {
   background-color: #ffffff; /* fallback color */
