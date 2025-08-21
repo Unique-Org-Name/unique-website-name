@@ -47,6 +47,10 @@ body {
 
 /* Dark Mode */
 @media (prefers-color-scheme: dark) {
+    .contentBox {
+      background-color: rgba(0, 0, 0, 0.7); /* dark semi-transparent background */
+      color: #fff; /* text readable in dark mode */
+  }
   body {
     background-color: #000000; /* fallback color */
     background-image: url("./assets/background-dark-mode.jpg");
