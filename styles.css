@@ -62,19 +62,18 @@ body {
         color: #ffffff;
     }
 
-    /* Menu links */
     .menuBar a {
         color: white;
     }
 
-    /* Content box dark mode */
+    /* Content box dark mode override */
     .contentBox {
-        background-color: rgba(0, 0, 0, 0.75) !important; /* dark, slightly transparent */
-        color: #ffffff !important;                       /* readable text */
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7) !important; /* stronger shadow */
+        background-color: rgba(0, 0, 0, 0.8) !important; /* force dark background */
+        color: #ffffff !important;                       /* text readable */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7) !important;
+        backdrop-filter: blur(5px);                     /* optional: adds slight blur for depth */
     }
 }
-
 /* ------------------------------ Navigation Bar ------------------------------ */
 .menuBar {
     position: fixed;
