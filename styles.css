@@ -22,12 +22,12 @@ html, body {
   padding: 0;
 }
 .contentBox {
-    background-color: rgba(255, 255, 255, 0.85); /* more opaque */
+    background-color: rgba(255, 255, 255, 0.9); /* more opaque */
     padding: 25px;
     border-radius: 10px;
     max-width: 800px;
     margin: 120px auto 20px auto;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
     color: inherit;
     position: relative; /* ensure it sits above background */
     z-index: 1; /* above background */
