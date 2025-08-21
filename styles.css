@@ -1,18 +1,58 @@
+/* General text styles */
 p, h1, h2, h3, h4, h5, h6, text, a, li, ul {
     font-family: "Comic Sans MS";
-    color: black;
+    color: inherit; /* inherit from body so dark mode works */
 }
 
+/* Title text */
 .title_text {
     position: fixed;
-    top: 70px;  /* Increased separation from menubar */
+    top: 70px;  /* Separation from menubar */
     left: 0;
     width: 100%;
     text-align: center;
-    color: black;
-    margin: 0;  /* Remove default margin */
+    color: inherit; /* inherit from body */
+    margin: 0;
 }
 
+/* Ensure background fills viewport */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Default = Light Mode */
+body {
+  background-color: #ffffff; /* fallback color */
+  background-image: url("assets/background-light-mode.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #000000;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #000000; /* fallback color */
+    background-image: url("assets/background-dark-mode.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #ffffff;
+  }
+
+  /* Optional: menu links in dark mode */
+  .menuBar a {
+      color: white;
+  }
+}
+
+/* Menu bar */
 .menuBar {
     position: fixed;
     top: 10px;
@@ -49,14 +89,14 @@ p, h1, h2, h3, h4, h5, h6, text, a, li, ul {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Regular h1 elements (not the title) */
+/* Headings */
 h1, h2:not(.title_text) {
     text-align: center;
-    margin: 5px 0;  /* 5px top and bottom margin */
+    margin: 5px 0;
 }
 
-/* First h1 after menubar needs extra top margin */
+/* First heading after menubar */
 h1, h2:not(.title_text):first-of-type {
-    margin-top: 60px;  /* Distance from menubar */
+    margin-top: 60px;
     margin-bottom: 5px;
 }
