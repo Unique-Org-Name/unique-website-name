@@ -48,8 +48,9 @@ body {
 /* Dark Mode */
 @media (prefers-color-scheme: dark) {
     .contentBox {
-      background-color: rgba(0, 0, 0, 0.7); /* dark semi-transparent background */
-      color: #fff; /* text readable in dark mode */
+        background-color: rgba(0, 0, 0, 0.6); /* dark and slightly transparent */
+        color: #ffffff; /* text readable on dark background */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* optional: slightly stronger shadow */
   }
   body {
     background-color: #000000; /* fallback color */
