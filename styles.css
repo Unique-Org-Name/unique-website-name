@@ -73,7 +73,9 @@ body {
     .contentBox {
         background-color: rgba(0, 0, 0, 0.85); /* semi-transparent dark */
         color: #ffffff;
-        box-shadow: 0 8px 20px rgba(255, 255, 255, 0.05); /* white shadow */
+        box-shadow: 
+            0 0 15px rgba(255, 255, 255, 0.15),   /* subtle glow */
+            0 0 30px rgba(255, 255, 255, 0.1);    /* softer outer glow */
         transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
     }
 }
