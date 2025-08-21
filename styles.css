@@ -52,26 +52,32 @@ body {
 
 /* Dark Mode */
 @media (prefers-color-scheme: dark) {
+    /* Body dark mode */
     body {
-        background-color: #000000;
+        background-color: #000000; /* solid black fallback */
         background-image: url("./assets/background-dark-mode.jpg");
         background-repeat: no-repeat;
         background-position: center;
         background-attachment: fixed;
         background-size: cover;
         color: #ffffff;
+        transition: background 0.3s ease, color 0.3s ease;
     }
 
+    /* Menu bar links */
     .menuBar a {
-        color: white;
+        color: #ffffff;
     }
 
-    /* Content box dark mode override */
+    /* Content box dark mode */
     .contentBox {
-    background-color: rgba(0, 0, 0, 0.85) !important;
-    color: #ffffff !important;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7) !important;
+        background-color: rgba(0, 0, 0, 0.85); /* semi-transparent dark */
+        color: #ffffff;
+        box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1); /* subtle light shadow */
+        transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    }
 }
+
 
 }
 /* ------------------------------ Navigation Bar ------------------------------ */
