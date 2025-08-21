@@ -60,7 +60,7 @@ body {
     right: 20px;
     background-color: #2076ff;
     border-radius: 8px;       /* subtle rounded corners for the menubar */
-    padding: 5px 0;           /* reduced padding to make corners visible */
+    padding: 10px 0;           /* reduced padding to make corners visible */
     z-index: 1000;
     box-sizing: border-box;
 }
