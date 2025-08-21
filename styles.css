@@ -1,6 +1,6 @@
 /* ------------------------------ General Text Styles ------------------------------ */
 p, h1, h2, h3, h4, h5, h6, text, a, li, ul {
-    font-family: "Audiowide", "Comic Sans MS", cursive;
+    font-family: 'Montserrat', sans-serif;
     color: inherit; /* inherit from body so dark mode works */
     margin: 0;
     padding: 0;
