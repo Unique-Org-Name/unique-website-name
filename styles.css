@@ -59,7 +59,7 @@ body {
     left: 20px;
     right: 20px;
     background-color: #2076ff;
-    border-radius: 5px;
+    border-radius: 8px; /* smaller roundness */
     padding: 10px 0;
     z-index: 1000;
 }
@@ -81,7 +81,7 @@ body {
     color: white;
     text-decoration: none;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 4px; /* smaller roundness for links */
     transition: background-color 0.3s;
 }
 
